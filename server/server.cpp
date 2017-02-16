@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 
 	if (mysql_init(&mysql_conn) != NULL)
 	{
-		if (mysql_real_connect(
+		if (mysql_real_connect( 
 			&mysql_conn, "localhost", "root", "root", "company", MYSQL_PORT, NULL, 0) != NULL)
 		{
 			if (mysql_query(&mysql_conn, "select * from employee") == 0)
